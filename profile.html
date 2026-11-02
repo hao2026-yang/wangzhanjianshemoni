@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人主页 - 抖音</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.2 8.8-2 4.4-4.4 2 2-4.4z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c0-3 2.7-4.8 6-4.8s6 1.8 6 4.8"/><path d="M16 5.2a3 3 0 0 1 0 5.6M17.5 14.4c2.1.5 3.5 2 3.5 4.1"/></symbol>
+    <symbol id="i-friends" viewBox="0 0 24 24"><circle cx="8" cy="9" r="2.8"/><circle cx="16.5" cy="10" r="2.4"/><path d="M2.8 19c0-2.6 2.4-4.2 5.2-4.2s5.2 1.6 5.2 4.2"/><path d="M14.4 15.3c2.9-.4 6.8 1 6.8 3.7"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c0-3.6 3.4-5.6 7.5-5.6s7.5 2 7.5 5.6"/></symbol>
+    <symbol id="i-live" viewBox="0 0 24 24"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m16 12 5.5-3.2v6.4z"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M7.5 4.5v15M16.5 4.5v15M3 9.5h4.5M3 14.5h4.5M16.5 9.5H21M16.5 14.5H21"/></symbol>
+    <symbol id="i-short" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2.5"/><path d="m11 9 4 3-4 3z"/></symbol>
+    <symbol id="i-game" viewBox="0 0 24 24"><path d="M7 8h10a4.5 4.5 0 0 1 4.4 5.5l-.7 3.3A3 3 0 0 1 17.5 19c-.9 0-1.7-.4-2.2-1.1L14 16h-4l-1.3 1.9A2.7 2.7 0 0 1 6.5 19a3 3 0 0 1-3-2.3l-.7-3.3A4.5 4.5 0 0 1 7 8z"/><path d="M8 11v3M6.5 12.5h3M15.5 11.5h.01M17.5 13.5h.01"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4.5 4.5"/></symbol>
+    <symbol id="i-diamond" viewBox="0 0 24 24"><path d="m12 3 4 4-4 14L8 7z"/><path d="M8 7h8M4 7l4-4M20 7l-4-4"/></symbol>
+    <symbol id="i-wall" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="m4 18 5-5 3.5 3.5L16 12l4 4"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 15.5V10a6 6 0 1 0-12 0v5.5L4.5 18h15z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path d="M20.5 12c0 4.1-3.8 7.4-8.5 7.4-1 0-2-.2-2.9-.4L4 20.5l1.3-3.4A7 7 0 0 1 3.5 12c0-4.1 3.8-7.4 8.5-7.4s8.5 3.3 8.5 7.4z"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M8 8l4-4 4 4"/><path d="M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-9.5A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.5 10.5C19.5 15.4 12 20 12 20z"/></symbol>
+    <symbol id="i-comment" viewBox="0 0 24 24"><path d="M20.5 11.5c0 4-3.8 7.2-8.5 7.2-1 0-2-.1-2.8-.4L4.5 20l1.2-3.3A6.7 6.7 0 0 1 3.5 11.5c0-4 3.8-7.2 8.5-7.2s8.5 3.2 8.5 7.2z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M14 4.5 20 10l-6 5.5V12c-4.5 0-7.5 1.6-9 5 0-6 3-9.4 9-9.6z"/></symbol>
+  </defs>
+</svg>
+
+<aside class="side">
+  <div class="side-logo"><a href="index.html" class="logo-text">抖音</a></div>
+
+  <nav class="side-nav">
+    <a href="index.html" class="nav-item"><svg class="ico"><use href="#i-compass"/></svg><span>精选</span></a>
+    <a href="index.html" class="nav-item"><svg class="ico"><use href="#i-star"/></svg><span>推荐</span></a>
+    <a href="index.html" class="nav-item"><svg class="ico"><use href="#i-sparkle"/></svg><span>AI 抖音</span><b class="badge">新</b></a>
+
+    <div class="side-divider"></div>
+
+    <a href="follow.html" class="nav-item"><svg class="ico"><use href="#i-users"/></svg><span>关注</span></a>
+    <a href="friends.html" class="nav-item"><svg class="ico"><use href="#i-friends"/></svg><span>朋友</span></a>
+    <a href="profile.html" class="nav-item active"><svg class="ico"><use href="#i-user"/></svg><span>我的</span></a>
+
+    <div class="side-divider"></div>
+
+    <p class="side-group-title">更多</p>
+    <a href="index.html" class="nav-item"><svg class="ico"><use href="#i-live"/></svg><span>直播</span></a>
+    <a href="index.html" class="nav-item"><svg class="ico"><use href="#i-film"/></svg><span>放映厅</span></a>
+    <a href="index.html" class="nav-item"><svg class="ico"><use href="#i-short"/></svg><span>短剧</span></a>
+    <a href="index.html" class="nav-item"><svg class="ico"><use href="#i-game"/></svg><span>小游戏</span><b class="badge">6</b></a>
+  </nav>
+
+  <div class="side-app">
+    <div class="qr"></div>
+    <p><strong>抖音精选</strong>手机随时看更方便</p>
+  </div>
+</aside>
+
+<main class="main">
+
+  <header class="topbar">
+    <div class="search">
+      <svg class="ico"><use href="#i-search"/></svg>
+      <input type="text" placeholder="搜索你感兴趣的内容">
+      <button class="search-btn" type="button">搜索</button>
+    </div>
+    <div class="top-actions">
+      <a href="#" class="top-link"><svg class="ico"><use href="#i-diamond"/></svg><span>充钻石</span></a>
+      <a href="#" class="top-link"><svg class="ico"><use href="#i-wall"/></svg><span>壁纸</span></a>
+      <a href="#" class="top-link"><svg class="ico"><use href="#i-bell"/></svg><span>通知</span></a>
+      <a href="#" class="top-link"><svg class="ico"><use href="#i-msg"/></svg><span>消息</span></a>
+      <a href="#" class="top-link"><svg class="ico"><use href="#i-upload"/></svg><span>投稿</span></a>
+      <a href="login.html" class="top-login">登录</a>
+      <a href="profile.html"><img class="top-avatar" src="images/touxiang1.jpg" alt="我的头像"></a>
+    </div>
+  </header>
+
+  <div class="cover-wrap">
+    <img src="images/banner.jpg" alt="主页背景">
+  </div>
+
+  <div class="profile-head">
+    <img class="big-avatar" src="images/touxiang1.jpg" alt="头像">
+    <div class="profile-info">
+      <h1>心动开机 <span style="font-size:12px;color:#8b8d98;font-weight:400">IP属地：北京</span></h1>
+      <p class="uid">抖音号：heartbeat_1999</p>
+      <p class="bio">记录美好生活 · 每周三晚八点更新　#影视剪辑 #城市漫游</p>
+      <div class="profile-stats">
+        <div><b>128</b>关注</div>
+        <div><b>12.4万</b>粉丝</div>
+        <div><b>236.8万</b>获赞</div>
+      </div>
+    </div>
+    <div class="profile-btns">
+      <button class="btn-ghost" type="button">编辑资料</button>
+      <button class="btn-ghost" type="button">分享主页</button>
+    </div>
+  </div>
+
+  <div class="profile-tabs" id="ptabs">
+    <a href="#" class="p-tab active" data-panel="works">作品 <span>12</span></a>
+    <a href="#" class="p-tab" data-panel="likes">喜欢 <span>8</span></a>
+    <a href="#" class="p-tab" data-panel="favs">收藏 <span>3</span></a>
+  </div>
+
+  <section class="works" id="works">
+    <a href="video.html" class="vcard"><img src="images/v1.png" alt=""><span class="dur">01:20</span>
+      <div class="play-mask"><svg class="ico"><use href="#i-play"/></svg></div>
+      <div class="vcard-body"><h3>作品 1</h3>
+        <div class="vcard-stats"><span><svg class="ico"><use href="#i-heart"/></svg>1.0万</span></div></div></a>
+
+    <a href="video.html" class="vcard"><img src="images/v3.png" alt=""><span class="dur">02:21</span>
+      <div class="play-mask"><svg class="ico"><use href="#i-play"/></svg></div>
+      <div class="vcard-body"><h3>作品 2</h3>
+        <div class="vcard-stats"><span><svg class="ico"><use href="#i-heart"/></svg>2.1万</span></div></div></a>
+
+    <a href="video.html" class="vcard"><img src="images/v5.png" alt=""><span class="dur">03:22</span>
+      <div class="play-mask"><svg class="ico"><use href="#i-play"/></svg></div>
+      <div class="vcard-body"><h3>作品 3</h3>
+        <div class="vcard-stats"><span><svg class="ico"><use href="#i-heart"/></svg>3.2万</span></div></div></a>
+
+    <a href="video.html" class="vcard"><img src="images/v6.png" alt=""><span class="dur">04:23</span>
+      <div class="play-mask"><svg class="ico"><use href="#i-play"/></svg></div>
+      <div class="vcard-body"><h3>作品 4</h3>
+        <div class="vcard-stats"><span><svg class="ico"><use href="#i-heart"/></svg>4.3万</span></div></div></a>
+
+    <a href="video.html" class="vcard"><img src="images/v7.png" alt=""><span class="dur">05:24</span>
+      <div class="play-mask"><svg class="ico"><use href="#i-play"/></svg></div>
+      <div class="vcard-body"><h3>作品 5</h3>
+        <div class="vcard-stats"><span><svg class="ico"><use href="#i-heart"/></svg>5.4万</span></div></div></a>
+
+    <a href="video.html" class="vcard"><img src="images/v10.png" alt=""><span class="dur">06:25</span>
+      <div class="play-mask"><svg class="ico"><use href="#i-play"/></svg></div>
+      <div class="vcard-body"><h3>作品 6</h3>
+        <div class="vcard-stats"><span><svg class="ico"><use href="#i-heart"/></svg>6.5万</span></div></div></a>
+
+  </section>
+
+  <section class="works" id="likes" style="display:none">
+    <a href="video.html" class="vcard"><img src="images/cover.jpg" alt=""><span class="dur">09:35</span>
+      <div class="vcard-body"><h3>《重生日记》EP.1-4</h3></div></a>
+    <a href="video.html" class="vcard"><img src="images/work2b.jpg" alt=""><span class="dur">45:50</span>
+      <div class="vcard-body"><h3>45 分钟随机空岛生存</h3></div></a>
+    <a href="video.html" class="vcard"><img src="images/work5.jpg" alt=""><span class="dur">03:42</span>
+      <div class="vcard-body"><h3>旧吉他弹夏天</h3></div></a>
+    <a href="video.html" class="vcard"><img src="images/work6.jpg" alt=""><span class="dur">12:08</span>
+      <div class="vcard-body"><h3>凌晨四点的海边</h3></div></a>
+  </section>
+
+  <section class="works" id="favs" style="display:none">
+    <a href="video.html" class="vcard"><img src="images/work1.jpg" alt=""><span class="dur">08:53</span>
+      <div class="vcard-body"><h3>网感好友</h3></div></a>
+    <a href="video.html" class="vcard"><img src="images/work4.jpg" alt=""><span class="dur">08:31</span>
+      <div class="vcard-body"><h3>小剧场合集</h3></div></a>
+  </section>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
